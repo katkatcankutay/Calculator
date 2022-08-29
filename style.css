@@ -66,11 +66,6 @@ body {
   align-items: center;
 }
 
-/* .screen:hover{
-    background-color: cornsilk;
-    color: black;
-} */
-
 .ac {
   grid-area: ac;
 }
