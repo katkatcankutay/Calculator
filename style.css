@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.container {
+  border: 2px solid red;
+  height: 80vh;
+  width: 30%;
+  padding: 1%;
+  border-radius: 3vw;
+  display: grid;
+  gap: 0.5vw;
+  background-color: black;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+    "s s s s"
+    "s s s s"
+    "s s s s"
+    "ac c p d"
+    "s7 s8 s9 sX"
+    "s4 s5 s6 m"
+    "s1 s2 s3 pl"
+    "on off s0 e";
+  color: white;
+}
+
+.calculator {
+  display: flex;
+  background-color: #333333;
+  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 1s;
+  font-size: 2vw;
+  border-radius: 50%;
+  color: white;
+}
+
+.calculator:hover {
+  transform: scale(90%);
+  color: red;
+}
+
+.screen {
+  grid-area: s;
+  background-color: black;
+  margin: 3%;
+  border-radius: 2vw;
+  transition: 1s;
+  color: black;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  align-items: center;
+}
+
+/* .screen:hover{
+    background-color: cornsilk;
+    color: black;
+} */
+
+.ac {
+  grid-area: ac;
+}
+
+.c {
+  grid-area: c;
+}
+
+.percentage {
+  grid-area: p;
+}
+
+.divide {
+  grid-area: d;
+  background-color: #f1a33c;
+}
+
+.seven {
+  grid-area: s7;
+}
+
+.eight {
+  grid-area: s8;
+}
+
+.nine {
+  grid-area: s9;
+}
+
+.X {
+  grid-area: sX;
+  background-color: #f1a33c;
+}
+
+.four {
+  grid-area: s4;
+}
+
+.five {
+  grid-area: s5;
+}
+
+.six {
+  grid-area: s6;
+}
+
+.minus {
+  grid-area: m;
+  background-color: #f1a33c;
+}
+
+.one {
+  grid-area: s1;
+}
+
+.two {
+  grid-area: s2;
+}
+
+.three {
+  grid-area: s3;
+}
+
+.plus {
+  grid-area: pl;
+  background-color: #f1a33c;
+}
+.on {
+  grid-area: on;
+  border-radius: 1vw;
+}
+.off {
+  grid-area: off;
+  border-radius: 1vw;
+}
+.zero {
+  grid-area: s0;
+  border-radius: 2vw;
+}
+
+.equal {
+  grid-area: e;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 50%;
+  }
+  .calculator {
+    font-size: 5vw;
+  }
+}
